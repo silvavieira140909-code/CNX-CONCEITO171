@@ -1,1 +1,6 @@
-Import defineConfig from Vite e import react from plugin react
+{ defineConfig from Vite
+import react from @ViteJS plugin react
+
+Export default def defineconfig ({
+plug-ins {react}
+});

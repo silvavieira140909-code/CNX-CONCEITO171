@@ -1,2 +1,2 @@
-import {Link,Outlet,useNavigate} from 'react-router-dom'; import {Glass} from './Glass'; import {signOut} from '../lib/auth';
+import {Link,Outlet,useNavigate} from 'react-router-dom'; import {Glass} from './Glass'; import {signOut} from './auth';
 export function Layout(){const nav=useNavigate(); return <div className="app-shell"><header><Link className="brand" to="/">VAULT<span>PRIME</span></Link><nav><Link to="/catalog">Catálogo</Link><Link to="/cart">Carrinho</Link><Link className="glass-btn" to="/login">Entrar</Link></nav></header><main><Outlet/></main><footer><span>Vault Prime</span><span>Produtos digitais • Downloads • APK • Conteúdo privado</span><button className="link-btn" onClick={async()=>{await signOut();nav('/')}}>Sair</button></footer></div>}

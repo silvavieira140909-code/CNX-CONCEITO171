@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom'; import type {Product} from '../types';
+export function ProductCard({p}:{p:Product}){return <article className="product-card glass"><div className="product-art" style={p.image_url?{backgroundImage:`url(${p.image_url})`}:{}}><span>{p.type.toUpperCase()}</span></div><div className="product-info"><h3>{p.title}</h3><p>{p.description}</p><div className="product-row"><strong>R$ {p.price.toFixed(2).replace('.',',')}</strong><Link className="glass-btn" to={`/product/${p.id}`}>Ver produto</Link></div></div></article>}

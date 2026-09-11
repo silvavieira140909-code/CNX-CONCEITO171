@@ -1,0 +1,3 @@
+import {ProductCard} from '../components/ProductCard'; import type {Product} from '../types';
+const demo:Product[]=[{id:'apk-demo',title:'APK Premium',description:'Arquivo APK de exemplo.',price:29.9,type:'apk',featured:true},{id:'video-demo',title:'Mentoria Privada',description:'Conteúdo em vídeo protegido.',price:79.9,type:'video',featured:true},{id:'download-demo',title:'Pack Digital',description:'Arquivos para download após aprovação.',price:39.9,type:'download',featured:true}];
+export function Catalog(){return <section className="section page"><span className="eyebrow">CATÁLOGO</span><h1>Produtos digitais</h1><p className="muted">APK, arquivos, URLs e conteúdos privados.</p><div className="grid">{demo.map(p=><ProductCard key={p.id} p={p}/>)}</div></section>}
